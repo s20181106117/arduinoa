@@ -1,0 +1,91 @@
+//A to I
+  //".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
+  // J to R 
+  //".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",
+  // S to Z
+  //"...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." 
+void setup()                   
+{
+  Serial.begin(9600);
+  pinMode(13,OUTPUT);
+}
+
+//一遍一遍地运行以下代码
+void loop()                    
+{
+  char ch;
+  ch=Serial.read();
+  if(ch == 'a'||ch == 'A')//".-"
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'b'||ch == 'B')//"-..."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13, HIGH);   
+      delay(500);                   
+      digitalWrite(13, LOW);  
+      delay(100); 
+    }  
+  if(ch == 'c'||ch == 'C')//"-.-."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100); 
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100);               
+  }
+  if(ch == 'd'||ch == 'D')//"-.."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13, HIGH);   
+      delay(2000);                   
+      digitalWrite(13, LOW);  
+      delay(100);  
+    }            
+  }
+  if(ch == 'e'||ch == 'E')//"."
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);      
+  }
+  if(ch == 'f'||ch == 'F')//"..-."
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }
+    digitalWrite(13, H
